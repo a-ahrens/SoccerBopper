@@ -25,7 +25,6 @@ public class FadeAway : MonoBehaviour
     void Update()
     {
         float alphaRemaining = countdownTimer.GetProportionTimeRemaining();
-        print(alphaRemaining);
         Color c = textUI.color;
         c.a = alphaRemaining;
         textUI.color = c;
@@ -34,5 +33,12 @@ public class FadeAway : MonoBehaviour
     public void StartFade(int fadeTime)
     {
         countdownTimer.ResetTimer(fadeTime);
+    }
+
+    public void ResetTransparency()
+    {
+        Color c = textUI.color;
+        c.a = 1;
+        textUI.color = c;
     }
 }

@@ -6,29 +6,24 @@ using UnityEngine.UI;
 public class Goal : MonoBehaviour
 {
 
-    [SerializeField] private int AddScoreToTeamNumber;
+    [SerializeField] private string AddScoreToTeam;
     [SerializeField] ScoreBoard scoreBoard;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.layer == 7)
         {
-            if (AddScoreToTeamNumber == 1)
+            if (AddScoreToTeam.Equals("Red"))
             {
                 Debug.Log("RED TEAM SCORES!");
-                scoreBoard.UpdateScore(1);
+                scoreBoard.UpdateScore("Red");
                 collision.transform.position = new Vector3(0, collision.transform.position.y, 0);
             }
             else
             {
                 Debug.Log("BLUE TEAM SCORES!");
-                scoreBoard.UpdateScore(2);
+                scoreBoard.UpdateScore("Blue");
                 collision.transform.position = new Vector3(0, collision.transform.position.y, 0);
             }
             

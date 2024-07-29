@@ -29,17 +29,27 @@ public class ScoreBoard : MonoBehaviour
         
     }
 
-    public void UpdateScore(int teamNumber)
+    public void UpdateScore(string teamColor)
     {
-        if(teamNumber == 1)
+        if(teamColor.Equals("Red"))
         {
             RedScore++;
-            UIManager.UpdateScore(teamNumber, RedScore);
+            UIManager.UpdateScore(teamColor, RedScore);
         } 
         else
         {
             BlueScore++;
-            UIManager.UpdateScore(teamNumber, BlueScore);
+            UIManager.UpdateScore(teamColor, BlueScore);
         }
+    }
+
+    public int GetRedScore()
+    {
+        return RedScore;
+    }
+
+    public int GetBlueScore()
+    {
+        return BlueScore;
     }
 }

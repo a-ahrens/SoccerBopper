@@ -217,6 +217,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1320407586}
+  - {fileID: 1230808851}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1456,8 +1457,8 @@ GameObject:
   - component: {fileID: 1230808851}
   - component: {fileID: 1230808854}
   - component: {fileID: 1230808853}
-  - component: {fileID: 1230808852}
   - component: {fileID: 1230808855}
+  - component: {fileID: 1230808856}
   m_Layer: 5
   m_Name: ScoreMsg_TxtPro
   m_TagString: Untagged
@@ -1477,26 +1478,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 77776619}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1283, y: 746.5284}
+  m_AnchoredPosition: {x: 3, y: 26.528442}
   m_SizeDelta: {x: 2500, y: 103.0569}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1230808852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230808850}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54402fb0f72a03f40ad9fdd7adf0ed90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1230808853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,13 +1533,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 19
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1604,6 +1593,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c310cf10df3a50d459fd6b9d5d41bfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1230808856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230808850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54402fb0f72a03f40ad9fdd7adf0ed90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1302737247
@@ -1763,6 +1764,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1302737251}
     - target: {fileID: 1405325983, guid: 59aa7f01898708340b93cce35ea26d5a, type: 3}
+      propertyPath: AddScoreToTeam
+      value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405325983, guid: 59aa7f01898708340b93cce35ea26d5a, type: 3}
       propertyPath: AddScoreToTeamNumber
       value: 1
       objectReference: {fileID: 0}
@@ -1855,6 +1860,10 @@ PrefabInstance:
       propertyPath: BlueScoreText
       value: 
       objectReference: {fileID: 1302737251}
+    - target: {fileID: 1405325983, guid: 59aa7f01898708340b93cce35ea26d5a, type: 3}
+      propertyPath: AddScoreToTeam
+      value: Red
+      objectReference: {fileID: 0}
     - target: {fileID: 1405325983, guid: 59aa7f01898708340b93cce35ea26d5a, type: 3}
       propertyPath: AddScoreToTeamNumber
       value: 2
@@ -2416,6 +2425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37be47134bd77944a9e2f8ce6aa70015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimerLength: 20
 --- !u!1 &2101966682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,5 +2589,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

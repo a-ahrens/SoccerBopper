@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class DigitalCountdown : MonoBehaviour
 {
+
+    [SerializeField] private int TimerLength;
     private TextMeshProUGUI textClock;
     private CountdownTimer countdownTimer;
+    private UIManager uiManager;
 
     void Awake()
     {
@@ -16,7 +19,13 @@ public class DigitalCountdown : MonoBehaviour
 
     void Start()
     {
-        countdownTimer.ResetTimer(30);
+        uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        countdownTimer.ResetTimer(TimerLength);
+
+        if(uiManager == null)
+        {
+            Debug.LogError("UIManager not found");
+        }
     }
 
     void Update()
@@ -30,6 +39,7 @@ public class DigitalCountdown : MonoBehaviour
     {
         if(secondsLeft <= 0)
         {
+            uiManager.EndOfRegulationText();
             return "END OF REGULATION";
         }
         else
