@@ -19,12 +19,19 @@ public class Goal : MonoBehaviour
                 Debug.Log("RED TEAM SCORES!");
                 scoreBoard.UpdateScore("Red");
                 collision.transform.position = new Vector3(0, collision.transform.position.y, 0);
+                Rigidbody otherRB = collision.gameObject.GetComponent<Rigidbody>();
+                otherRB.velocity = Vector3.zero;
+                otherRB.angularVelocity = Vector3.zero;
+
             }
             else
             {
                 Debug.Log("BLUE TEAM SCORES!");
                 scoreBoard.UpdateScore("Blue");
                 collision.transform.position = new Vector3(0, collision.transform.position.y, 0);
+                Rigidbody otherRB = collision.gameObject.GetComponent<Rigidbody>();
+                otherRB.velocity = Vector3.zero;
+                otherRB.angularVelocity = Vector3.zero;
             }
             
         }

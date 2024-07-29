@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 112396462}
   - component: {fileID: 112396461}
   - component: {fileID: 112396460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 420481219}
   - component: {fileID: 420481218}
   - component: {fileID: 420481217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 438474986}
   - component: {fileID: 438474985}
   - component: {fileID: 438474984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,6 +620,7 @@ GameObject:
   - component: {fileID: 453941724}
   - component: {fileID: 453941723}
   - component: {fileID: 453941728}
+  - component: {fileID: 453941729}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -639,10 +640,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8da6e9d63407ec4d855541e8f9021b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  JumpHeight: 2
-  KickForce: 1
-  FlipSpeed: 45
 --- !u!65 &453941724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -714,7 +711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453941722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0.568, z: 0}
+  m_LocalPosition: {x: -3, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -729,14 +726,26 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453941722}
   serializedVersion: 2
-  m_Mass: 19.28
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 5
   m_AngularDrag: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 2
+--- !u!114 &453941729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453941722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60355bc328e52b4784eb74c84592679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &456974870
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +755,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 456974871}
-  m_Layer: 0
+  - component: {fileID: 456974872}
+  m_Layer: 8
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,6 +784,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &456974872
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456974870}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &516725718
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +812,7 @@ GameObject:
   - component: {fileID: 516725722}
   - component: {fileID: 516725721}
   - component: {fileID: 516725720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1069,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0.4492253, y: -0.0005271427, z: 0.0034851371, w: -0.8934116}
-  m_LocalPosition: {x: -2.9050934, y: 35.3646, z: -25.853622}
+  m_LocalPosition: {x: -2.9050932, y: 35.346603, z: -25.853622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1147,7 +1173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021336801}
   m_LocalRotation: {x: -0.4492253, y: -0.0005271427, z: 0.0034851371, w: -0.8934116}
-  m_LocalPosition: {x: -2.9050934, y: 35.3646, z: -25.853622}
+  m_LocalPosition: {x: -2.9050932, y: 35.346603, z: -25.853622}
   m_LocalScale: {x: 0.63321, y: 0.37407, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1167,7 +1193,7 @@ GameObject:
   - component: {fileID: 1024903421}
   - component: {fileID: 1024903420}
   - component: {fileID: 1024903419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1506,7 +1532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GOAAALLLLLL!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1947,6 +1973,7 @@ GameObject:
   - component: {fileID: 1601948616}
   - component: {fileID: 1601948615}
   - component: {fileID: 1601948619}
+  - component: {fileID: 1601948620}
   m_Layer: 7
   m_Name: Ball
   m_TagString: Untagged
@@ -1961,7 +1988,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601948614}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4ef84b8a5dbb3ce43a4d7e79c39a461d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2040,14 +2067,26 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601948614}
   serializedVersion: 2
-  m_Mass: 0.05
-  m_Drag: 0
+  m_Mass: 0.015
+  m_Drag: 2
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &1601948620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601948614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d921d8613fea8e548b12410ef2b8f547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706473066
 GameObject:
   m_ObjectHideFlags: 3
@@ -2438,7 +2477,7 @@ GameObject:
   - component: {fileID: 2101966686}
   - component: {fileID: 2101966685}
   - component: {fileID: 2101966684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
